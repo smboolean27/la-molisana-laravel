@@ -1,0 +1,67 @@
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+
+	.card {
+		width: calc((100% / 3) - 20px);
+		margin: 10px;
+
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+
+		@media screen and (max-width: 768px) {
+			width: calc((100% / 2) - 20px);
+		}
+
+		@media screen and (max-width: 480px) {
+			width: calc(100% - 20px);
+		}
+	}
+}
+
+.product {
+	position: relative;
+	background-color: $product_bg;
+	padding: 40px 0;
+	color: $main_color;
+
+	h1 {
+		text-align: center;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	&-chevron {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+
+		a {
+			padding: 15px;
+			background-color: rgba(255,255,255,.6);
+		}
+
+		&.left {
+			left: 20px;
+		}
+		&.right {
+			right: 20px;
+		}
+	}
+}
+
+.template-sidebar > .container {
+	display: flex;
+}
+
+.template-sidebar aside {
+	width: 30%;
+}
+.template-sidebar .content {
+	width: 70%;
+}
